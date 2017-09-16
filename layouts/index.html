@@ -21,9 +21,9 @@
 {{ end }}
 	<ul class="social-icons">
 		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.twitter }}"><i class="fa fa-twitter"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.facebook }}"><i class="fa fa-facebook"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.instagram }}"><i class="fa fa-instagram"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.googleplus }}"><i class="fa fa-google-plus"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "facebook" }}<li><a href="{{ .Site.Params.facebook }}"><i class="fa fa-facebook"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "instagram" }}<li><a href="{{ .Site.Params.instagram }}"><i class="fa fa-instagram"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "googleplus" }}<li><a href="{{ .Site.Params.googleplus }}"><i class="fa fa-google-plus"></i></a></li>{{ end }}
 	</ul>
 	{{ block "main" . }}
 	{{ end }}
