@@ -12,6 +12,7 @@
 {{ if (where (readDir $directory) "Name" $filename) }}
 	<link rel="icon" type="image/png" href="favicon.png" />
 {{ end }}
+	<title>{{ .Site.Title }}</title>
 </head>
 <body>
 {{ $directory := "themes/hugo-theme-lean-launch-page/static/" }}
