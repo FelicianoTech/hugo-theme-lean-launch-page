@@ -1,4 +1,4 @@
-baseurl = "https://www.example.com"
+baseurl = "https://themes.gohugo.io/theme/hugo-theme-lean-launch-page/"
 title = "My New Product"
 author = "Ricardo N Feliciano (FelicianoTech)"
 canonifyurls = true
