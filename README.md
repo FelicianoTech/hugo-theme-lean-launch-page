@@ -20,6 +20,10 @@ You can set the social media URL for Twitter, Facebook, Instagram, and Google+ t
 
 Set `mailchimpURL` in your Hugo config to enable an email form on your page allowing you to collect signups from visitors. This how is how you build your launch list for your product.
 
+#### Getting the URL
+
+To get the MailChimp URL, go to your list on MailChimp, click "Signup forms", and select "Embedded forms". In the "Copy/paste onto your site" text area, you'll see HTMl that says `<form action="`. The URL that follows is what you want.
+
 ## Contribute
 
 This theme is under active development. Found a bug? Have feedback? Let us know on GitHub.
