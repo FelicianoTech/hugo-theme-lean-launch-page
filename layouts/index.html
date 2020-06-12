@@ -34,12 +34,14 @@
 	<p>{{ .Site.Params.tagline }}</p>
 	{{ if isset .Site.Params "mailchimpurl" }}{{ partial "mailchimp-signup" . }}{{ end }}
 	<div id="benefits">
-		{{ range where .Data.Pages "Section" "benefits" }}
-		<div>
-			<h2><i class="fa {{ .Params.icon }}"></i>{{ .Title }}</h2>
-			{{ .Content }}
-		</div>
+		{{ range where .Site.Pages "Section" "benefits" }}
+		{{ if in .Path ".md" }}
+			<div>
+				<h2><i class="fa {{ .Params.icon }}"></i>{{ .Title }}</h2>
+				{{ .Content }}
+			</div>
 		{{ end }}
+	{{ end }}
 	</div>
 </body>
 </html>
