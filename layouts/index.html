@@ -44,7 +44,7 @@
 	{{ end }}
 	</div>
 	<div>
-		{{ range where .Site.Pages "Path" "footer.md" }}
+		{{ range where .Site.Pages ".File.Path" "eq" "footer.md" }}
 			{{ .Content }}
 		{{ end }}
 	</div>
