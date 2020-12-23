@@ -43,5 +43,10 @@
 		{{ end }}
 	{{ end }}
 	</div>
+	<div>
+		{{ range where .Site.Pages "Path" "footer.md" }}
+			{{ .Content }}
+		{{ end }}
+	</div>
 </body>
 </html>
