@@ -25,6 +25,7 @@
 		{{ if isset .Site.Params "youtube" }}<li><a href="{{ .Site.Params.youtube }}"><i class="fab fa-youtube"></i></a></li>{{ end }}
 		{{ if isset .Site.Params "linkedin" }}<li><a href="{{ .Site.Params.linkedin }}"><i class="fab fa-linkedin"></i></a></li>{{ end }}
 		{{ if isset .Site.Params "github" }}<li><a href="{{ .Site.Params.github }}"><i class="fab fa-github"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "discord" }}<li><a href="{{ .Site.Params.discord }}"><i class="fab fa-discord"></i></a></li>{{ end }}
 	</ul>
 	{{ block "main" . }}
 	{{ end }}
