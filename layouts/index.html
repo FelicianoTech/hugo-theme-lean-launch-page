@@ -19,13 +19,13 @@
 	<img class="logo" src="/favicon.png" alt="Logo" />
 {{ end }}
 	<ul class="social-icons">
-		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.twitter }}"><i class="fab fa-twitter"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "facebook" }}<li><a href="{{ .Site.Params.facebook }}"><i class="fab fa-facebook"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "instagram" }}<li><a href="{{ .Site.Params.instagram }}"><i class="fab fa-instagram"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "youtube" }}<li><a href="{{ .Site.Params.youtube }}"><i class="fab fa-youtube"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "linkedin" }}<li><a href="{{ .Site.Params.linkedin }}"><i class="fab fa-linkedin"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "github" }}<li><a href="{{ .Site.Params.github }}"><i class="fab fa-github"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "discord" }}<li><a href="{{ .Site.Params.discord }}"><i class="fab fa-discord"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.twitter }}" title="Twitter"><i aria-hidden="true" class="fab fa-twitter"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "facebook" }}<li><a href="{{ .Site.Params.facebook }}" title="Facebook"><i aria-hidden="true" class="fab fa-facebook"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "instagram" }}<li><a href="{{ .Site.Params.instagram }}" title="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "youtube" }}<li><a href="{{ .Site.Params.youtube }}" title="Youtube"><i aria-hidden="true" class="fab fa-youtube"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "linkedin" }}<li><a href="{{ .Site.Params.linkedin }}" title="Linkedin"><i aria-hidden="true" class="fab fa-linkedin"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "github" }}<li><a href="{{ .Site.Params.github }}" title="Github"><i aria-hidden="true" class="fab fa-github"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "discord" }}<li><a href="{{ .Site.Params.discord }}" title="Discord"><i aria-hidden="true" class="fab fa-discord"></i></a></li>{{ end }}
 	</ul>
 	{{ block "main" . }}
 	{{ end }}
