@@ -5,28 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/assets/main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/vendor/font-awesome/css/solid.min.css">
+	<link rel="stylesheet" href="/vendor/font-awesome/css/brands.min.css">
 	{{ template "_internal/google_analytics.html" . }}
-{{ $directory := "themes/hugo-theme-lean-launch-page/static/" }}
-{{ $filename := "favicon.png" }}
-{{ if (where (readDir $directory) "Name" $filename) }}
+	{{ template "_internal/opengraph.html" . }}
+{{ if (fileExists "/static/favicon.png") }}
 	<link rel="icon" type="image/png" href="favicon.png" />
 {{ end }}
 	<title>{{ .Site.Title }}</title>
 </head>
 <body>
-{{ $directory := "themes/hugo-theme-lean-launch-page/static/" }}
-{{ $filename := "favicon.png" }}
-{{ if (where (readDir $directory) "Name" $filename) }}
+{{ if (fileExists "/static/favicon.png") }}
 	<img class="logo" src="/favicon.png" alt="Logo" />
 {{ end }}
 	<ul class="social-icons">
-		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.twitter }}"><i class="fa fa-twitter"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "facebook" }}<li><a href="{{ .Site.Params.facebook }}"><i class="fa fa-facebook"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "instagram" }}<li><a href="{{ .Site.Params.instagram }}"><i class="fa fa-instagram"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "youtube" }}<li><a href="{{ .Site.Params.youtube }}"><i class="fa fa-youtube"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "linkedin" }}<li><a href="{{ .Site.Params.linkedin }}"><i class="fa fa-linkedin"></i></a></li>{{ end }}
-		{{ if isset .Site.Params "github" }}<li><a href="{{ .Site.Params.github }}"><i class="fa fa-github"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "twitter" }}<li><a href="{{ .Site.Params.twitter }}" title="Twitter"><i aria-hidden="true" class="fab fa-twitter"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "facebook" }}<li><a href="{{ .Site.Params.facebook }}" title="Facebook"><i aria-hidden="true" class="fab fa-facebook"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "instagram" }}<li><a href="{{ .Site.Params.instagram }}" title="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "youtube" }}<li><a href="{{ .Site.Params.youtube }}" title="Youtube"><i aria-hidden="true" class="fab fa-youtube"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "linkedin" }}<li><a href="{{ .Site.Params.linkedin }}" title="Linkedin"><i aria-hidden="true" class="fab fa-linkedin"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "github" }}<li><a href="{{ .Site.Params.github }}" title="Github"><i aria-hidden="true" class="fab fa-github"></i></a></li>{{ end }}
+		{{ if isset .Site.Params "discord" }}<li><a href="{{ .Site.Params.discord }}" title="Discord"><i aria-hidden="true" class="fab fa-discord"></i></a></li>{{ end }}
 	</ul>
 	{{ block "main" . }}
 	{{ end }}
@@ -37,11 +37,16 @@
 		{{ range where .Site.Pages "Section" "benefits" }}
 		{{ if in .Path ".md" }}
 			<div>
-				<h2><i class="fa {{ .Params.icon }}"></i>{{ .Title }}</h2>
+				<h2><i class="fas {{ .Params.icon }}"></i>{{ .Title }}</h2>
 				{{ .Content }}
 			</div>
 		{{ end }}
 	{{ end }}
+	</div>
+	<div>
+    {{ with .Site.GetPage "/footer" }}
+      {{ .Content }}
+    {{ end }}
 	</div>
 </body>
 </html>
