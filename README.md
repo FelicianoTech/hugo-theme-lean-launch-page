@@ -22,7 +22,7 @@ Set `mailchimpURL` in your Hugo config to enable an email form on your page allo
 
 #### Getting the URL
 
-To get the MailChimp URL, go to your list on MailChimp, click "Signup forms", and select "Embedded forms". In the "Copy/paste onto your site" text area, you'll see HTMl that says `<form action="`. The URL that follows is what you want.
+To get the MailChimp URL, go to your "Audience" on MailChimp, click "Signup forms", and select "Embedded forms". In the "Copy/paste onto your site" text area, you'll see HTMl that says `<form action="`. The URL that follows is what you want.
 
 ## Contribute
 
