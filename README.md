@@ -14,7 +14,18 @@ You can provide your Google Analytics ID in the Hugo config to add GA tracking t
 
 ### Social Media
 
-You can set the social media URL for Twitter, Facebook, Instagram, and Google+ to your Hugo config file and the associated icons (and links) will show up on your launch page.
+You can set the social media URL for your accounts to your Hugo config file and the associated icons (and links) will show up on your launch page.
+The following are supported:
+- Mastodon
+- Twitter
+- Facebook
+- Instagram
+- YouTube
+- LinkedIn
+- GitHub
+- Discord
+
+When enabling Mastodon, it will also allow you to verify your domain.
 
 ### MailChimp
 
