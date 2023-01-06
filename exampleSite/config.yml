@@ -6,15 +6,19 @@ paginate: 3
 
 theme: "hugo-theme-lean-launch-page"
 
-googleAnalytics: "UA-123456"
+googleAnalytics: "G-123456"
 
 params:
   tagline: "We're launching a new, better solution."
   mailchimpURL: "//my-account.mailchimp.com/my-subscriber-url"
 
+  mastodon: "https://mastodon.url/@MyNewProduct"
   twitter: "https://twitter.com/MyNewProduct"
   facebook: "https://facebook.com/MyNewProduct"
   instagram: "https://instagram.com/MyNewProduct"
   youtube: "https://www.youtube.com/channel/MyNewChannel"
   linkedin: "https://www.linkedin.com/company/MyNewProduct"
   github: "https://github.com/MyNewProduct"
+
+  images:
+    - "favicon.png"
